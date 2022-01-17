@@ -1,0 +1,75 @@
+
+import java.util.LinkedList;
+
+public class test6 {
+private LinkedList<Object> intset;
+public test6() {
+    intset = new LinkedList<Object>();
+}
+
+public boolean isEmpty()
+{
+    return intset.isEmpty();
+}
+    
+public void insertFirst(Object elem){
+    intset.addFirst(elem);
+}
+public void insertLast(Object elem){
+    intset.addLast(elem);
+}
+public Object deleteFirst()
+{
+    return intset.removeFirst();
+}
+public Object deleteLast()
+{
+    return intset.removeLast();
+}
+ public Object getFirst(){
+     return intset.getFirst();
+ }
+ public Object getLast(){
+     return intset.getLast();
+ }
+ 
+ public int size(){
+     return intset.size();
+ }
+ 
+ public void print()
+ {
+     for ( int i =0; i<intset.size(); i++){
+         System.out.println(intset.get(i)+ " " );
+     }
+     System.out.println();
+ }
+ 
+
+
+    public static void main(String[] args) {
+        
+        
+       test6 liczba = new test6();
+       
+       liczba.insertFirst(72);
+       liczba.insertFirst(12);
+       liczba.insertFirst(32);
+         
+         liczba.insertLast(11);
+         liczba.insertLast(12);
+         liczba.insertLast(13);
+         
+         liczba.print();
+         
+         liczba.deleteFirst();
+       //  System.out.println(" Usuwam pierwszą wartość ciągu" + liczba.deleteFirst());
+         liczba.deleteFirst();
+         
+         liczba.deleteLast();
+         liczba.deleteLast();
+        
+         liczba.print();
+    }
+    
+}
