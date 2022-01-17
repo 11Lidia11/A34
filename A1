@@ -1,0 +1,80 @@
+public class AATest {
+private static int[] tab;
+private int elem;
+
+
+public AATest(int maxSize){
+    tab= new int[maxSize];
+    elem=0;
+}
+
+public void insert(int value){
+    if(elem>=tab.length){
+        int loctab[] = new int[tab.length*2];
+        for(int i =0;i<tab.length;i++)
+            loctab[i]=tab[i];
+        tab=loctab;
+    }
+    tab[elem]=value;
+    elem++;
+    
+}
+public int get(int index){
+    return tab[index];
+}
+
+public int size(){
+    return elem;
+}
+
+public boolean remove(int index){
+    if(elem==0|| index>=elem|| index<0)
+        return false;
+    for(int i=index;i<elem-1;i++){
+        tab[i]=tab[i+1];
+}
+    elem--;
+    return true;
+}
+
+public int find(int szukaj){
+    for(int i=0;i<elem;i++){
+        if(tab[i]==szukaj)return i;
+        
+    }
+    return-1;
+}
+
+     public void print(){
+         for(int i=0;i<elem;i++){
+             System.out.print(get(i)+ " ");
+             
+         }
+         System.out.println();
+     }   
+
+
+
+public static void main(String[] args){
+    int maxSize=2;
+    AATest liczba = new AATest(maxSize);
+  
+    
+    liczba.insert(22);
+    liczba.insert(33);
+    liczba.print();
+    
+    
+    
+    liczba.remove(1);
+    liczba.print();
+    
+    liczba.insert(33);
+    liczba.insert(12);
+    
+    
+    liczba.print();
+    int szukaj =liczba.find(11);
+    System.out.print(szukaj);
+}
+}
