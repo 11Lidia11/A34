@@ -1,0 +1,48 @@
+
+import java.util.LinkedList;
+
+
+public class test5 {
+    private LinkedList<Integer> intset;
+    public test5(){
+    
+        intset= new LinkedList<Integer>();
+      
+}
+    public void insert(int elem){
+        intset.addLast(elem);
+    }
+    public int remove(){
+       return intset.removeFirst().intValue();
+    }
+     public int peek(){
+       return intset.getFirst().intValue();
+    }
+     public int size(){
+         return intset.size();
+     }
+    
+    
+    
+    
+    public static void main(String[] args){
+        test5 liczba = new test5();
+        
+        System.out.println(" Wstawiam 10 ");
+        liczba.insert(10);
+        System.out.println(" Wstawiam 10 ");
+        liczba.insert(10);
+        System.out.println(" Wstawiam 10 ");
+        liczba.insert(10);
+        System.out.println(" Wstawiam 10 ");
+        liczba.insert(10);
+        
+        
+        int elem = liczba.remove();
+        System.out.println("Usuwam  " +elem);
+        System.out.println("Usuwam  " +liczba.remove());
+        System.out.println("Usuwam  " +liczba.remove());
+        
+        
+    }
+}
