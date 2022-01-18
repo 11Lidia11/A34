@@ -1,0 +1,39 @@
+import java.util.LinkedList;
+
+
+public class test3 {
+    private LinkedList<Integer> intset;
+    public test3(){
+        intset = new LinkedList<Integer>();
+    }
+    
+    public void push(int elem){
+        intset.push(elem);
+    }
+    public int pop(){
+        return intset.pop();
+    }
+    public int peek(){
+        return intset.peek();
+    }
+    
+    public static void main(String[] args){
+        test3 liczba = new test3();
+        liczba.push(55);
+         liczba.push(55);
+          liczba.push(55);
+           liczba.push(55);
+            liczba.push(55);
+            
+            int value = liczba.pop();
+            System.out.println(value + "  ");
+            
+            
+    }
+    
+    
+    
+    
+    
+    
+}
