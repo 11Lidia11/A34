@@ -1,0 +1,35 @@
+
+public class test22 {
+    private ArrayList<Integer> intstack;
+    public test22(){
+        intstack = new ArrayList<Integer>();
+    }
+    
+    
+    public void push(int elem){
+       intstack.add(elem);
+    }
+    
+    public int pop(){
+        return intstack.remove(intstack.size()-1);
+    }
+    
+    public int peek(){
+        return intstack.get(intstack.size()-1);
+    }
+    
+    
+public static void main(String[] args){
+ test22 liczba = new test22();
+ 
+ liczba.push(13);
+  liczba.push(13);
+   liczba.push(13);
+ 
+    
+    int value = liczba.peek();
+    System.out.println(value + " ");
+    
+    
+}
+}
