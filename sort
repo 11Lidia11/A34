@@ -1,0 +1,25 @@
+public class sortowanie_bąbe_tablic_int {
+
+    public static void main(String[] Args) {
+        
+ int[] table = {7, 6, 4, 5, -5, 9, 7};
+ int i,j, temp;
+
+ 
+ System.out.println();
+ for(i=0;i<table.length;i++){
+        for(j=0;j<table.length-1;j++){
+            if (table[j]> table[j+1]){
+                temp = table[j];
+                table[j]= table[j+1];
+                table[j+1]= temp;
+                
+            }
+        }
+ }
+        System.out.println("Posortowana tablica");
+        for(i=0; i<table.length; i++) System.out.print(table[i]+ " ");
+    
+     
+ 
+    }
