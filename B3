@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+
+
+public class test4 {
+    private ArrayList<Integer> intset;
+    public test4(){
+    
+        intset = new ArrayList<Integer>();
+        
+    }
+    
+    
+    public void insert(int elem){
+        intset.add(elem);
+    }
+    public int remove(){
+    return intset.remove(0).intValue();//tak napisany moze być jednym zdaniem czy inaczej?
+    
+}
+    public int peek(){
+       return intset.get(0).intValue(); 
+    }
+    
+    
+    public int size(){
+        return intset.size();
+    }
+            
+    
+    public static void main(String[] args){
+        test4 liczba = new test4();
+        
+        System.out.println(" Wstawiam 40 hehe");
+        liczba.insert(40);
+        System.out.println(" Wstawiam 30 hehe");
+        liczba.insert(30);
+        System.out.println(" Wstawiam 20 hehe");
+        liczba.insert(20);
+        System.out.println(" Wstawiam 10 hehe");
+        liczba.insert(10);
+        System.out.println(" Wstawiam 30 hehe");
+        liczba.insert(30);
+        
+        int elem = liczba.remove();
+        System.out.println(" Usuwam" + elem);
+        System.out.println(" Usuwam" + liczba.remove());
+        System.out.println(" Usuwam" + liczba.remove());
+        
+         System.out.println(" Wstawiam 10 hehe");
+        liczba.insert(10);
+        System.out.println(" Wstawiam 30 hehe");
+        liczba.insert(30);
+        
+        System.out.print("");
+   
+    }
+}
